@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import styled from 'styled-components';
@@ -12,19 +12,26 @@ const HeaderSection = styled.header`
 const HeaderWrapper = styled.div`
   display: flex;
   padding: 2em 0;
+  align-items: end;
 `
 const HeaderDeveloper = styled.div`
   margin-right: 4em;
   font-size: 22px;
   color: green;
+  // padding-bottom: 5px;
   span {
     color: white;
     font-size: 22px;
+    :hover {
+      cursor: pointer;
+    }
   }
+
 `
 
 const NavLinks = styled.nav`
   color: white;
+  margin-top: 2.5px;
   ul {
     display: flex;
     color: inherit;
@@ -36,12 +43,16 @@ const NavLinks = styled.nav`
   }
 `
 const NavLink = styled.a`
+
   color: inherit;
   font-size: inherit;
+  padding-bottom: 5px;
+  line-height: 0.5;
   :hover {
     font-size: inherit;
     color: inherit;
     cursor: pointer;
+    border-bottom: 2px solid green;
   }
 `
 
