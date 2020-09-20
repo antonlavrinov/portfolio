@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Container } from './style';
 
 const HeaderSection = styled.header`
-
+  background: var(--anton-black);
 `
 const HeaderWrapper = styled.div`
   display: flex;
@@ -12,7 +12,9 @@ const HeaderWrapper = styled.div`
 `
 const HeaderDeveloper = styled.div`
   color: white;
-  font-size: 25px;
+  // color: var(--anton-black);
+  font-size: 24px;
+  // font-weight: 600;
   :hover {
     cursor: pointer;
   }

@@ -6,14 +6,35 @@ import { Container } from './style';
 import LinkOut from '../assets/svgs/link-out.svg';
 
 
+
 const PortfolioSection = styled.section`
-    // background: white;
-    padding: 70px 0;
+    background: white;
+    // background: var(--anton-green);
+    padding: 20px 0 70px;
+
+`
+
+const PortfolioSectionWrapper = styled.div`
+    margin-top: -100px;
+`
+
+const PortfolioSectionTitle = styled.div`
+    color: white;
+    color: var(--anton-black);
+    font-size: 35px;
+    margin-bottom: 30px; 
+    display: inline-block;
+    font-weight: 700;
+    border-bottom: 5px solid var(--anton-green);
 `
 const PortfolioWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
+    @media(max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
 `
 
 const PortfolioItemWrapper = styled(props => <BackgroundImage {...props}/>)`
@@ -23,6 +44,7 @@ const PortfolioItemWrapper = styled(props => <BackgroundImage {...props}/>)`
     overflow: hidden;
     transition: transform 0.2s ease;
     position: relative;
+    // box-shadow: 0 0 10px rgba(0,0,0,0.3);
     svg {
         width: 35px;
         height: 35px;
@@ -53,6 +75,21 @@ const PortfolioItemWrapper = styled(props => <BackgroundImage {...props}/>)`
         svg {
             opacity: 1;
         }
+    }
+    @media(max-width: 1200px) {
+        height: 380px;
+    }
+
+    @media(max-width: 991px) {
+        height: 300px;
+    }
+
+
+    @media(max-width: 768px) {
+        height: 430px;
+    }
+    @media(max-width: 575px) {
+        height: 75vw;
     }
 `
 
@@ -85,6 +122,12 @@ const PorfolioLinkWrapper = styled.span`
         width: 50px;
         height: 50px;
     }
+`
+
+const GreenOverlay = styled.div`
+    width: 100%;
+    background: var(--anton-green);
+    height: 100px;
 `
 
 
@@ -128,34 +171,47 @@ const Portfolio = () => {
     const bookstorePreview = data.bookstore.childImageSharp.fluid;
     const granichPreview = data.granich.childImageSharp.fluid;
     return (
-        <PortfolioSection>
-            <Container>
-                <PortfolioWrapper>
-                    <a href="https://antonlavrinov.github.io/Memory-Game/" target="_blank">
-                        <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={memoryGamePreview}>
-                            <LinkOut/>
-                        </PortfolioItemWrapper>
-                    </a>
-                    <a href="https://antonlavrinov.github.io/Memory-Game/" target="_blank">
-                        <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={granichPreview}>
-                            <LinkOut/>
-                        </PortfolioItemWrapper>
-                    </a>
-                    <a href="https://antonlavrinov.github.io/Memory-Game/" target="_blank">
-                        <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={gentlemanPreview}>
-                            <LinkOut/>
-                        </PortfolioItemWrapper>
-                    </a>
-                    <a href="https://antonlavrinov.github.io/bookstore/" target="_blank">
-                        <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={bookstorePreview}>
-                            <LinkOut/>
-                        </PortfolioItemWrapper>
-                    </a>
+        <>
 
-                </PortfolioWrapper>
-            </Container>
-            
-        </PortfolioSection>
+            {/* <GreenOverlay/> */}
+            <PortfolioSection>
+               
+
+                <Container>
+                    <PortfolioSectionWrapper>
+                    <PortfolioSectionTitle>Портфолио</PortfolioSectionTitle>
+                        <PortfolioWrapper>
+                            <a href="https://antonlavrinov.github.io/Memory-Game/" target="_blank">
+                                <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={memoryGamePreview}>
+                                    <LinkOut/>
+                                </PortfolioItemWrapper>
+                            </a>
+                            <a href="https://elated-kalam-d4b493.netlify.app/" target="_blank">
+                                <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={granichPreview}>
+                                    <LinkOut/>
+                                </PortfolioItemWrapper>
+                            </a>
+                            <a href="https://antonlavrinov.github.io/Memory-Game/" target="_blank">
+                                <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={gentlemanPreview}>
+                                    <LinkOut/>
+                                </PortfolioItemWrapper>
+                            </a>
+                            <a href="https://antonlavrinov.github.io/bookstore/" target="_blank">
+                                <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={bookstorePreview}>
+                                    <LinkOut/>
+                                </PortfolioItemWrapper>
+                            </a>
+
+                        </PortfolioWrapper>
+                    </PortfolioSectionWrapper>
+                    
+                </Container>
+                
+            </PortfolioSection>
+        
+        
+        </>
+        
     )
 }
 
