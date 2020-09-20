@@ -15,7 +15,7 @@ const Footer = () => {
         <FooterSection>
             <Container>
                 <FooterWrapper>
-                    Footer
+                    © {new Date().getFullYear()}
                 </FooterWrapper>
             </Container>
             

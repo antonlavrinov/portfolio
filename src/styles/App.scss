@@ -5,115 +5,42 @@
 
 
 
+
+
 @font-face {
-	font-family: 'Cormorant Garamond';
-	src: url('../fonts/cormorant/CormorantGaramond-BoldItalic.eot');
-    src: local('☺'), url('../fonts/cormorant/CormorantGaramond-BoldItalic.woff') format('woff'), 
-    url('../fonts/cormorant/CormorantGaramond-BoldItalic.ttf') format('truetype'), 
-    url('../fonts/cormorant/CormorantGaramond-BoldItalic.svg') format('svg');
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-SemiBold.eot');
+    src: local('☺'), url('../fonts/Gilroy-SemiBold.woff') format('woff'), 
+    url('../fonts/Gilroy-SemiBold.ttf') format('truetype'), 
+    url('../fonts/Gilroy-SemiBold.svg') format('svg');
+	font-weight: 600;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Medium.eot');
+    src: local('☺'), url('../fonts/Gilroy-Medium.woff') format('woff'), 
+    url('../fonts/Gilroy-Medium.ttf') format('truetype'), 
+    url('../fonts/Gilroy-Medium.svg') format('svg');
+	font-weight: 500;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Bold.eot');
+    src: local('☺'), url('../fonts/Gilroy-Bold.woff') format('woff'), 
+    url('../fonts/Gilroy-Bold.ttf') format('truetype'), 
+    url('../fonts/Gilroy-Bold.svg') format('svg');
 	font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-
-
-@font-face {
-	font-family: 'Inter';
-	src: url('../fonts/inter/Inter-Regular-slnt=0.eot');
-    src: local('☺'), url('../fonts/inter/Inter-Regular.woff') format('woff'), 
-    url('../fonts/inter/Inter-Regular.ttf') format('truetype'), 
-    url('../fonts/inter/Inter-Regular.svg') format('svg');
-	font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    display: swap;
 }
 
 
-
-@font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter-Medium.eot');
-    src: url('../fonts/Inter-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Inter-Medium.woff2') format('woff2'),
-    url('../fonts/Inter-Medium.woff') format('woff'),
-    url('../fonts/Inter-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter-SemiBold.eot');
-    src: url('../fonts/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Inter-SemiBold.woff2') format('woff2'),
-    url('../fonts/Inter-SemiBold.woff') format('woff'),
-    url('../fonts/Inter-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter-Bold.eot');
-    src: url('../fonts/Inter-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Inter-Bold.woff2') format('woff2'),
-    url('../fonts/Inter-Bold.woff') format('woff'),
-    url('../fonts/Inter-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
-
-// @font-face {
-//     font-family: 'EB Garamond';
-//     src: url('../fonts/EBGaramond-Italic.eot');
-//     src: url('../fonts/EBGaramond-Italic.eot?#iefix') format('embedded-opentype'),
-//     url('../fonts/EBGaramond-Italic.woff2') format('woff2'),
-//     url('../fonts/EBGaramond-Italic.woff') format('woff'),
-//     url('../fonts/EBGaramond-Italic.ttf') format('truetype');
-//     font-weight: 400;
-//     font-style: italic;
-//     font-display: swap;
-// }
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('../fonts/EBGaramond-MediumItalic.eot');
-    src: url('../fonts/EBGaramond-MediumItalic.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/EBGaramond-MediumItalic.woff2') format('woff2'),
-    url('../fonts/EBGaramond-MediumItalic.woff') format('woff'),
-    url('../fonts/EBGaramond-MediumItalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('../fonts/EBGaramond-Medium.eot');
-    src: url('../fonts/EBGaramond-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/EBGaramond-Medium.woff2') format('woff2'),
-    url('../fonts/EBGaramond-Medium.woff') format('woff'),
-    url('../fonts/EBGaramond-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Merriweather';
-    src: url('../fonts/merriweather/Merriweather-Bold.eot');
-    src: url('../fonts/merriweather/Merriweather-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/merriweather/Merriweather-Bold.woff2') format('woff2'),
-    url('../fonts/merriweather/Merriweather-Bold.woff') format('woff'),
-    url('../fonts/merriweather/Merriweather-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
 
 
 
@@ -182,30 +109,6 @@ a, a:hover {
 
 
 
-
-
-// a {
-//     display: block;
-// }
-
-
-// .button {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: relative;
-//     min-width: 155px;
-//     height: 60px;
-//     border-radius: 8px;
-//     border: none;
-//     background: black;
-//     color: white;
-//     text-transform: uppercase;
-
-//     font-size: 18px;
-//     letter-spacing: .070em;
-//     padding: 5px;
-// }
 
 button {
     border: none;
@@ -285,39 +188,5 @@ ul, li {
 }
 
 
-//import blocks
-// @import './blocks/_header';
-// @import './blocks/_footer';
-// @import './blocks/_offer';
-// @import './blocks/_courses';
-// @import './blocks/_about-us';
-// @import './blocks/_lead-magnit';
-// @import './blocks/_politika';
-// @import './blocks/_soglash';
-// @import './blocks/_scroll-up';
-// @import './blocks/_custom-button';
-// @import './blocks/_filter';
-// @import './blocks/_header';
-// @import './blocks/_homepage';
-// @import './blocks/_logo';
-// @import './blocks/_product-item';
-// @import './blocks/_products-list';
-// @import './blocks/_search-field';
-// @import './blocks/_slider';
-// @import './blocks/_white-overlay';
-// @import './blocks/_search-dropdown';
-// @import './blocks/_signin-dropdown';
-// @import './blocks/_google-button';
-// @import './blocks/_form';
-// @import './blocks/_checkbox';
-// @import './blocks/_cart-popup';
-// @import './blocks/_overlay';
-// @import './blocks/_sign-up-page';
-// @import './blocks/_breadcrumbs';
-// @import './blocks/_section-collection';
-// @import './blocks/_catalog-collection';
-// @import './blocks/_section-page';
-// @import './blocks/_catalog-page';
-// @import './blocks/_footer';
-//import media
+
 @import './base/_media';

@@ -8,23 +8,25 @@ export const GlobalStyle = createGlobalStyle`
 
 
     * {
-        font-family: 'Inter', sans-serif;
-        --granich-red: rgb(228, 5, 33);
-        --granich-black: #2d2d2d;
+        font-family: var(--main-font);
+        --anton-black: #181818;
+        --anton-grey: #282828;
+        --anton-green: #00C281;
         --anton-background-color: #1c1c1c;
         --anton-green-gradient: linear-gradient(180deg, rgba(118,233,65,1) 10%, rgba(15,216,80,1) 100%);
         --anton-section-color: linear-gradient(125deg, rgba(53,53,53,1) 0%, rgba(45,45,45,1) 46%);
         --granich-grey: #888989;
+        --main-font: Gilroy, sans-serif;
 
         --granich-red-gradient: linear-gradient(167deg, rgba(230,25,51,1) 0%, rgba(213,12,34,1) 39%, rgba(189,3,27,1) 61%);
         --granich-red-gradient-horizontal: linear-gradient(90deg, rgba(230,25,51,1) 0%, rgba(213,12,34,1) 50%, rgba(189,3,27,1) 100%);
         
-        letter-spacing: 0vw;
-        font-weight: 400;
+        letter-spacing: 0em;
+        font-weight: 500;
     }
 
     body {
-        background: var(--anton-background-color);
+        background: var(--anton-black);
 
     }
     
@@ -35,9 +37,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
 export const Container = styled.div`
-    width: 78%;
-    // width: 1024px;
-    // max-width: 1024px;
+    width: 1080px;
     margin: 0 auto;
 
     // @media(max-width: 991px) {
