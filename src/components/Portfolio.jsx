@@ -9,8 +9,10 @@ import LinkOut from '../assets/svgs/link-out.svg';
 
 const PortfolioSection = styled.section`
     background: white;
-    // background: var(--anton-green);
     padding: 20px 0 70px;
+    @media(max-width: 991px) {
+        padding-bottom: 0;
+    }
 
 `
 
@@ -26,6 +28,7 @@ const PortfolioSectionTitle = styled.div`
     display: inline-block;
     font-weight: 700;
     border-bottom: 5px solid var(--anton-green);
+
 `
 const PortfolioWrapper = styled.div`
     display: grid;
@@ -44,7 +47,6 @@ const PortfolioItemWrapper = styled(props => <BackgroundImage {...props}/>)`
     overflow: hidden;
     transition: transform 0.2s ease;
     position: relative;
-    // box-shadow: 0 0 10px rgba(0,0,0,0.3);
     svg {
         width: 35px;
         height: 35px;
@@ -90,45 +92,21 @@ const PortfolioItemWrapper = styled(props => <BackgroundImage {...props}/>)`
     }
     @media(max-width: 575px) {
         height: 75vw;
+        :hover {
+            transform: translateY(0);
+        }
+        svg {
+            width: 6vw;
+            height: 6vw;
+            right: 4vw;
+            top: 4vw;
+            opacity: 1;
+        }
     }
-`
-
-const PortfolioItemOverlay = styled.div`
-    width: 100%;
-    height: 100%;
-    transition: all 0.2s ease;
-    opacity: 0.9;
-    position: absolute;
-    top: 0;
-    left: 0;
 
 `
 
-const PorfolioLinkWrapper = styled.span`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
 
-    i {
-        margin-top: 10px;
-        display: block;
-        font-style: normal;
-        color: white;
-        font-size: 22px;
-    }
-    svg {
-        width: 50px;
-        height: 50px;
-    }
-`
-
-const GreenOverlay = styled.div`
-    width: 100%;
-    background: var(--anton-green);
-    height: 100px;
-`
 
 
 const Portfolio = () => {

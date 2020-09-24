@@ -12,11 +12,12 @@ const HeaderWrapper = styled.div`
 `
 const HeaderDeveloper = styled.div`
   color: white;
-  // color: var(--anton-black);
   font-size: 24px;
-  // font-weight: 600;
   :hover {
     cursor: pointer;
+  }
+  @media(max-width: 480px) {
+    font-size: 6vw;
   }
 
 `

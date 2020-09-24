@@ -2,20 +2,28 @@ import React from 'react'
 import styled from 'styled-components';
 import Brush from '../assets/svgs/brush.svg';
 import Code from '../assets/svgs/code.svg';
-import Sass from '../assets/svgs/sass.svg';
-import Html from '../assets/svgs/html.svg';
-import Css from '../assets/svgs/css.svg';
-import Js from '../assets/svgs/js.svg';
-import ReactLogo from '../assets/svgs/react-icon.svg';
-import GatsbyIcon from '../assets/svgs/gatsby.svg';
-import Git from '../assets/svgs/git.svg';
-import Npm from '../assets/svgs/npm.svg';
 import ArrowIcon from '../assets/svgs/offer_arrow.svg';
 import { Container} from './style';
 import SvgOverlay from '../assets/svgs/svg-overlay.svg';
-
+import SvgOverlayMobile from '../assets/svgs/svg-overlay_mobile.svg';
+import IconsGroup from '../assets/svgs/offer_icons.svg';
 
 const SvgOverlayWrapper = styled(props=> <SvgOverlay {...props}/>)`
+    width: 100%;
+    background: none;
+    margin-top: -180px;
+    height: 350px;
+    display: block;
+    svg {
+        width: 100%;
+        height: 350px;
+    }
+    @media(max-width: 480px) {
+        display: none;
+    }
+`
+
+const SvgOverlayWrapperMobile = styled(props=> <SvgOverlayMobile {...props}/>)`
     width: 100%;
     background: none;
     margin-top: -180px;
@@ -23,6 +31,10 @@ const SvgOverlayWrapper = styled(props=> <SvgOverlay {...props}/>)`
     svg {
         width: 100%;
         height: 350px;
+    }
+    display: none;
+    @media(max-width: 480px) {
+        display: block;
     }
 `
 
@@ -35,10 +47,10 @@ const OfferWrapper = styled.div`
 
     width: 100%;
     padding: 60px 0 190px;
-    // padding: 60px 0 60px;
     display: flex;
     @media(max-width: 768px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        padding-bottom: 80px;
     }
 `
 const OfferTitle = styled.h1`
@@ -56,10 +68,24 @@ const OfferTitle = styled.h1`
     @media(max-width: 1200px) {
         font-size: 55px;
     }
+    @media(max-width: 991px) {
+        font-size: 45px;
+    }
+    @media(max-width: 768px) {
+        font-size: 55px;
+    }
+    @media(max-width: 480px) {
+        font-size: 14vw;
+    }
 `
+
+
 
 const Arrow = styled(props => <ArrowIcon {...props}/>)`
     margin: 0 20px;
+    @media(max-width: 480px) {
+        margin: 0 4vw;
+    }
 `
 
 const OfferWhatIDo = styled.div`
@@ -73,8 +99,11 @@ const OfferWhatIDoText = styled.div`
     font-size: 18px;
     width: 173px;
     margin-left: 25px;
-    // color: var(--anton-black);
     letter-spacing: 0.04em;
+    @media(max-width: 480px) {
+        font-size: 4.5vw;
+        margin-left: 5vw;
+    }
 `
 
 const OfferAbout = styled.div`
@@ -83,83 +112,76 @@ const OfferAbout = styled.div`
     line-height: 1.5;
     letter-spacing: 0.025em;
     width: 95%;
-    // color: var(--anton-black);
+    @media(max-width: 480px) {
+        font-size: 4.5vw;
+    }
 `
 
 const OfferIconWrapper = styled.div`
     width: 70px;
     height: 70px;
     background: linear-gradient(142.48deg, #2B2B2B 29.21%, #232323 105.71%), #282828;
-    // background: white;
-
     display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 1px 1px rgba(187, 187, 187, 0.22);
-    // box-shadow: none;
-    border-radius: 12px;
     svg {
         width: 50px;
         height: 50px;
     }
+    @media(max-width: 480px) {
+        width: 15vw;
+        height: 15vw;
+        min-width: 15vw;
+        min-height: 15vw;
+        border-radius: 1.5vw;
+        svg {
+            width: 10vw;
+            height: 10vw;
+        }
+    }
 `
 
 const OfferMainSkills = styled.div`
- display: flex;
- @media(max-width: 768px) {
-    width: 100%;
-    justify-content: space-between;
-}
-`
-const OfferSkillsColumn = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 15px;
-    height: 340px;
-    @media(max-width: 768px) {
-        height: 300px;
-    }
-
-`
-
-const OfferInfoBlock = styled.div`
-
-`
-
-const SkillLogoWrapper = styled.div`
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     svg {
-        transition: transform 0.2s ease;
-        :hover {
-            transform: scale(1.05);
-        }
-    }
-    span {
-        font-size: 16px;
-        color: var(--anton-grey);
-        color: white;
-        opacity: 0.2;
-        margin-top: 10px;
-        line-height: 1;
-        letter-spacing: 0.05em;
-
+        width: 550px;
+        margin-right: -70px;
+        margin-top: -80px;
     }
     @media(max-width: 1200px) {
         svg {
-            width: 8vw;
+            width: 450px;
+            margin-right: -70px;
+            margin-top: -60px;
+        }
+    }
+    @media(max-width: 991px) {
+        svg {
+            width: 380px;
+            margin-right: 0;
+            margin-top: -60px;
         }
     }
     @media(max-width: 768px) {
-        width: auto;
+        svg {
+            width: 100%;
+            margin-right: 0;
+            margin-top: 0;
+        }
     }
 
 `
+
+
+const OfferInfoBlock = styled.div`
+    @media(max-width: 768px) {
+        margin-bottom: 30px;
+    }
+`
+
+
+
 
 
 const Offer = () => {
@@ -193,46 +215,7 @@ const Offer = () => {
                             </OfferAbout>
                         </OfferInfoBlock>
                         <OfferMainSkills>
-                            <OfferSkillsColumn>
-                                <SkillLogoWrapper>
-                                    <Html/>
-                                    <span>HTML5</span>
-                                </SkillLogoWrapper>
-                                <SkillLogoWrapper>
-                                    <GatsbyIcon/>
-                                    <span>Gatsby</span>
-                                </SkillLogoWrapper>
-                                <SkillLogoWrapper>
-                                    <Npm/>
-                                    <span>npm</span>
-                                </SkillLogoWrapper>
-                            </OfferSkillsColumn>
-                            <OfferSkillsColumn>
-                                <SkillLogoWrapper>
-                                    <ReactLogo/>
-                                    <span>React</span>
-                                </SkillLogoWrapper>
-                                <SkillLogoWrapper>
-                                    <Sass/>
-                                    <span>SASS</span>
-                                </SkillLogoWrapper>
-
-                                
-                            </OfferSkillsColumn>
-                            <OfferSkillsColumn>
-                                <SkillLogoWrapper>
-                                    <Js/>
-                                    <span>Java Script</span>
-                                </SkillLogoWrapper>
-                                <SkillLogoWrapper>
-                                    <Css/>
-                                    <span>CSS3</span>
-                                </SkillLogoWrapper>
-                                <SkillLogoWrapper>
-                                    <Git/>
-                                    <span>git</span>
-                                </SkillLogoWrapper>
-                            </OfferSkillsColumn>
+                            <IconsGroup/>
                         </OfferMainSkills>
 
                     </OfferWrapper>
@@ -242,6 +225,8 @@ const Offer = () => {
                 
             </OfferSection>
             <SvgOverlayWrapper/>
+            <SvgOverlayWrapperMobile/>
+
         
         </>
         
