@@ -9,7 +9,7 @@ import LinkOut from '../assets/svgs/link-out.svg';
 
 const PortfolioSection = styled.section`
     background: white;
-    padding: 20px 0 70px;
+    padding: 20px 0 0;
     @media(max-width: 991px) {
         padding-bottom: 0;
     }
@@ -150,8 +150,6 @@ const Portfolio = () => {
     const granichPreview = data.granich.childImageSharp.fluid;
     return (
         <>
-
-            {/* <GreenOverlay/> */}
             <PortfolioSection>
                
 
@@ -159,22 +157,22 @@ const Portfolio = () => {
                     <PortfolioSectionWrapper>
                     <PortfolioSectionTitle>Портфолио</PortfolioSectionTitle>
                         <PortfolioWrapper>
-                            <a href="https://antonlavrinov.github.io/Memory-Game/" target="_blank">
+                            <a href="https://antonlavrinov.github.io/Memory-Game/" rel="noopener noreferrer" target="_blank">
                                 <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={memoryGamePreview}>
                                     <LinkOut/>
                                 </PortfolioItemWrapper>
                             </a>
-                            <a href="https://elated-kalam-d4b493.netlify.app/" target="_blank">
+                            <a href="https://granich.design/" rel="noopener noreferrer" target="_blank">
                                 <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={granichPreview}>
                                     <LinkOut/>
                                 </PortfolioItemWrapper>
                             </a>
-                            <a href="https://antonlavrinov.github.io/Memory-Game/" target="_blank">
+                            <a href="https://thirsty-lichterman-7f4fc4.netlify.app/" rel="noopener noreferrer" target="_blank">
                                 <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={gentlemanPreview}>
                                     <LinkOut/>
                                 </PortfolioItemWrapper>
                             </a>
-                            <a href="https://antonlavrinov.github.io/bookstore/" target="_blank">
+                            <a href="https://antonlavrinov.github.io/bookstore/" rel="noopener noreferrer" target="_blank">
                                 <PortfolioItemWrapper style={{backgroundSize: 'cover'}} fluid={bookstorePreview}>
                                     <LinkOut/>
                                 </PortfolioItemWrapper>

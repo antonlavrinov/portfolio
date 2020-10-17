@@ -1,8 +1,3 @@
-//import variables
-@import './base/_variables';
-@import './base/_fonts';
-
-
 
 
 
@@ -15,7 +10,7 @@
     url('../fonts/Gilroy-SemiBold.svg') format('svg');
 	font-weight: 600;
     font-style: normal;
-    display: swap;
+    font-display: swap;
 }
 
 @font-face {
@@ -26,7 +21,7 @@
     url('../fonts/Gilroy-Medium.svg') format('svg');
 	font-weight: 500;
     font-style: normal;
-    display: swap;
+    font-display: swap;
 }
 
 @font-face {
@@ -37,7 +32,7 @@
     url('../fonts/Gilroy-Bold.svg') format('svg');
 	font-weight: 700;
     font-style: normal;
-    display: swap;
+    font-display: swap;
 }
 
 
@@ -61,11 +56,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     letter-spacing: .05em;
-    // font-family: 'Inter', sans-serif;
-    font-family: 'Inter', serif;
     font-weight: 500;
     font-size: 14px;
-    color: $black;
+    color: white;
 }
 
 input, input:hover, input:active, input:focus {
@@ -128,17 +121,6 @@ ul, li {
 	box-sizing: border-box;
 }
 
-::-webkit-input-placeholder { /* Edge */
-    color: $light-grey-characters;
-}
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $light-grey-characters;
-}
-  
-::placeholder {
-    color: $light-grey-characters;
-}
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -189,4 +171,3 @@ ul, li {
 
 
 
-@import './base/_media';

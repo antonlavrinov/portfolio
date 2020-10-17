@@ -6,7 +6,7 @@ import Portfolio from "../components/Portfolio";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO/>
     <Offer/>
     <Portfolio/>
   </Layout>

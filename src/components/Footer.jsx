@@ -81,6 +81,7 @@ const LinkWrapper = styled.a`
 
 const EmailWrapper = styled.div`
     position: relative;
+    margin-top: -3px;
     :hover {
         cursor: pointer;
         &:before, &:after {
@@ -192,12 +193,15 @@ const FooterTitle = styled.div`
     white-space: nowrap;
 `
 
-const FooterMail = styled.div`
+const FooterMail = styled.a`
     color: white;
     font-size: 16px;
     border-bottom: 1px solid rgba(256,256,256,0.2);
     :hover {
         cursor: pointer;
+        color: white;
+        font-size: 16px;
+        border-color: white;
     }
 `
 
@@ -232,15 +236,15 @@ const SvgFooterOverlayWrapper = styled(props=> <SvgFooterOverlay {...props}/>)`
 
 const SvgFooterOverlayMobileWrapper = styled(props=> <SvgFooterOverlayMobile {...props}/>)`
     width: 100%;
-    margin-bottom: -180px;
+    margin-bottom: -115px;
     position: relative;
     z-index: 1;
-    height: 350px;
-    min-height: 350px;
+    height: 220px;
+    min-height: 220px;
     display: none;
     svg {
         width: 100%;
-        height: 350px;
+        height: 220px;
         fill: blue;
     }
     @media(max-width: 480px) {
@@ -250,7 +254,6 @@ const SvgFooterOverlayMobileWrapper = styled(props=> <SvgFooterOverlayMobile {..
 
 const Footer = () => {
     const [tooltipEmail, setTooltipEmail] = useState('Скопировать')
-    console.log(tooltipEmail)
     return (
         <>
             <SvgFooterOverlayWrapper/>
@@ -263,13 +266,13 @@ const Footer = () => {
                         </FooterTitle>
 
                         <FooterSocials>
-                            <LinkWrapper target="_blank" content="Вконтакте" href="https://vk.com/anton_alv">
+                            <LinkWrapper rel="noopener noreferrer" target="_blank" content="Вконтакте" href="https://vk.com/anton_alv">
                                 <Vk/>
                             </LinkWrapper>
-                            <LinkWrapper target="_blank" content="Telegram" href="https://t.me/lav_anton">
+                            <LinkWrapper rel="noopener noreferrer" target="_blank" content="Telegram" href="https://t.me/lav_anton">
                                 <Telegram/>
                             </LinkWrapper>
-                            <LinkWrapper target="_blank" content="GitHub" href="https://github.com/antonlavrinov">
+                            <LinkWrapper rel="noopener noreferrer" target="_blank" content="GitHub" href="https://github.com/antonlavrinov">
                                 <Github/>
                             </LinkWrapper>
 
@@ -283,7 +286,7 @@ const Footer = () => {
 
                         </FooterSocials>
                         © {new Date().getFullYear()}
-                        <FooterMail>
+                        <FooterMail href="/">
                             anton-dev.ru
                         </FooterMail>
                     </FooterWrapper>

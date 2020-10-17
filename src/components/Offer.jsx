@@ -52,6 +52,7 @@ const OfferWrapper = styled.div`
         flex-direction: column;
         padding-bottom: 80px;
     }
+
 `
 const OfferTitle = styled.h1`
     font-size: 60px;
@@ -75,7 +76,10 @@ const OfferTitle = styled.h1`
         font-size: 55px;
     }
     @media(max-width: 480px) {
-        font-size: 14vw;
+        font-size: 12vw;
+        span {
+            display: none;
+        }
     }
 `
 
@@ -101,7 +105,7 @@ const OfferWhatIDoText = styled.div`
     margin-left: 25px;
     letter-spacing: 0.04em;
     @media(max-width: 480px) {
-        font-size: 4.5vw;
+        font-size: 4vw;
         margin-left: 5vw;
     }
 `
@@ -113,7 +117,7 @@ const OfferAbout = styled.div`
     letter-spacing: 0.025em;
     width: 95%;
     @media(max-width: 480px) {
-        font-size: 4.5vw;
+        font-size: 4vw;
     }
 `
 
@@ -131,14 +135,14 @@ const OfferIconWrapper = styled.div`
         height: 50px;
     }
     @media(max-width: 480px) {
-        width: 15vw;
-        height: 15vw;
-        min-width: 15vw;
-        min-height: 15vw;
+        width: 12vw;
+        height: 12vw;
+        min-width: 12vw;
+        min-height: 12vw;
         border-radius: 1.5vw;
         svg {
-            width: 10vw;
-            height: 10vw;
+            width: 8vw;
+            height: 8vw;
         }
     }
 `
@@ -203,13 +207,13 @@ const Offer = () => {
                                     <Code/>
                                 </OfferIconWrapper>
                                 <OfferWhatIDoText>
-                                    Превращаю дизайн в код
+                                    Превращаю <br/>дизайн в код
                                 </OfferWhatIDoText>
                             </OfferWhatIDo>
                             <OfferAbout>
                                 Привет! Меня зовут Антон. 
                                 Разработкой сайтов занимаюсь уже более 1 года. 
-                                Пишу чистый и понятный код, очень щипитильно 
+                                Пишу чистый и понятный код, очень щепетильно 
                                 отношусь к деталям при верстке готовых макетов. 
                                 Ниже можно ознакомиться с моими лучшими работами ↓
                             </OfferAbout>

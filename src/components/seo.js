@@ -19,6 +19,8 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            ogImage
+            siteUrl
           }
         }
       }
@@ -26,14 +28,14 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaTitle = title || site.siteMetadata.title
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={metaTitle}
       meta={[
         {
           name: `description`,
@@ -44,36 +46,34 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
           property: `og:type`,
           content: `website`,
         },
         {
-          name: `twitter:card`,
-          content: `summary`,
+          property: `og:image`,
+          content: `${site.siteMetadata.ogImage}`
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
+          property: `og:image:width`,
+          content: '1200'
+        },        
         {
-          name: `twitter:title`,
-          content: title,
-        },
+          property: `og:image:height`,
+          content: '630'
+        }, 
         {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
+          property: `og:url`,
+          content: `${site.siteMetadata.siteUrl}`,
+        }, 
       ].concat(meta)}
-    />
+    >
+      <link rel="canonical" href={site.siteMetadata.siteUrl}/>
+    </Helmet>
   )
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `ru`,
   meta: [],
   description: ``,
 }
@@ -82,7 +82,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  // title: PropTypes.string.isRequired,
 }
 
 export default SEO

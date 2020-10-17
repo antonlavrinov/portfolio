@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: Gilroy, sans-serif;
         --anton-black: #181818;
         --anton-grey: #282828;
-        --anton-green: #00C281;
+        --anton-green: #00E296;
         --anton-blue: #0089FF;
         --anton-background-color: #1c1c1c;
         --anton-green-gradient: linear-gradient(180deg, rgba(118,233,65,1) 10%, rgba(15,216,80,1) 100%);
