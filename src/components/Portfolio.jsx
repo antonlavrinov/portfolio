@@ -10,8 +10,10 @@ import LinkOut from '../assets/svgs/link-out.svg';
 const PortfolioSection = styled.section`
     background: white;
     padding: 20px 0 0;
+    margin-bottom: 100px;
     @media(max-width: 991px) {
         padding-bottom: 0;
+        margin-bottom: 100px;
     }
 
 `
