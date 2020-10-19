@@ -10,7 +10,7 @@ import ReduxSvgIcon from '../assets/svgs/skills-icons/redux.svg';
 import SassIcon from '../assets/svgs/skills-icons/sass.svg';
 import JQueryIcon from '../assets/svgs/skills-icons/jQuery.svg';
 import PhotoshopIcon from '../assets/svgs/skills-icons/photoshop.svg';
-import IllustratorIcon from '../assets/svgs/skills-icons/illustrator.svg';
+import IllustratorSvgIcon from '../assets/svgs/skills-icons/illustrator-icon.svg';
 import StyledComponentsIcon from '../assets/svgs/skills-icons/styled-components.svg';
 import GitIcon from '../assets/svgs/skills-icons/git.svg';
 import FigmaIcon from '../assets/svgs/skills-icons/figma.svg';
@@ -185,7 +185,7 @@ const Skills = () => {
                             <SkillsText>Photoshop</SkillsText>
                         </SkillsItemWrapper>
                         <SkillsItemWrapper>
-                            <IllustratorIcon/>
+                            <IllustratorSvgIcon/>
                             <SkillsText>Illustrator</SkillsText>
                         </SkillsItemWrapper>
                         <SkillsItemWrapper>
