@@ -16,7 +16,7 @@ import GitIcon from '../assets/svgs/skills-icons/git.svg';
 import FigmaIcon from '../assets/svgs/skills-icons/figma.svg';
 import GulpIcon from '../assets/svgs/skills-icons/gulp.svg';
 import NpmIcon from '../assets/svgs/skills-icons/npm.svg';
-
+ 
 
 const SkillsSection = styled.section`
 
