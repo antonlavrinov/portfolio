@@ -11,12 +11,13 @@ import SassIcon from '../assets/svgs/skills-icons/sass.svg';
 import JQueryIcon from '../assets/svgs/skills-icons/jQuery.svg';
 import PhotoshopIcon from '../assets/svgs/skills-icons/photoshop.svg';
 import IllustratorSvgIcon from '../assets/svgs/skills-icons/illustrator-icon.svg';
-import StyledComponentsIcon from '../assets/svgs/skills-icons/styled-components.svg';
+// import StyledComponentsIcon from '../assets/svgs/skills-icons/styled-components.svg';
 import GitIcon from '../assets/svgs/skills-icons/git.svg';
 import FigmaIcon from '../assets/svgs/skills-icons/figma.svg';
 import GulpIcon from '../assets/svgs/skills-icons/gulp.svg';
 import NpmIcon from '../assets/svgs/skills-icons/npm.svg';
- 
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 const SkillsSection = styled.section`
 
@@ -116,7 +117,32 @@ const SkillsColumnTwo = styled.div`
     
 `
 
+const SkillsImage = styled(props => <Img {...props}/>)`
+    width: 55px;
+    margin-right: 10px;
+    @media(max-width: 480px) {
+        width: 40px;
+
+    }
+
+`
+
 const Skills = () => {
+    const data = useStaticQuery(graphql`
+        query skillsIcons {
+            styledComponentsPngIcon: file(relativePath: { eq: "styled-components.jpg" }) {
+                childImageSharp {
+                    fluid(maxWidth: 120, quality: 100) {
+                        ...GatsbyImageSharpFluid_withWebp
+                    }
+                }
+            }
+            
+
+        }
+    `)
+
+    const styledComponents = data.styledComponentsPngIcon.childImageSharp.fluid;
     return (
         <SkillsSection>
             <Container>
@@ -159,7 +185,7 @@ const Skills = () => {
                                 <SkillsText>Sass / Scss</SkillsText>
                             </SkillsItemWrapper>
                             <SkillsItemWrapper>
-                                <StyledComponentsIcon/>
+                                <SkillsImage fluid={styledComponents}/>
                                 <SkillsText>styled components</SkillsText>
                             </SkillsItemWrapper>
                             <SkillsItemWrapper>
