@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import Brush from '../assets/svgs/brush.svg';
 import Code from '../assets/svgs/code.svg';
 import ArrowIcon from '../assets/svgs/offer_arrow.svg';
-import { Container} from './style';
+import { Container } from './style';
 import SvgOverlay from '../assets/svgs/svg-overlay.svg';
 import SvgOverlayMobile from '../assets/svgs/svg-overlay_mobile.svg';
 import IconsGroup from '../assets/svgs/offer_icons.svg';
 
-const SvgOverlayWrapper = styled(props=> <SvgOverlay {...props}/>)`
+const SvgOverlayWrapper = styled(props => <SvgOverlay {...props} />)`
     width: 100%;
     background: none;
     margin-top: -180px;
@@ -23,7 +23,7 @@ const SvgOverlayWrapper = styled(props=> <SvgOverlay {...props}/>)`
     }
 `
 
-const SvgOverlayWrapperMobile = styled(props=> <SvgOverlayMobile {...props}/>)`
+const SvgOverlayWrapperMobile = styled(props => <SvgOverlayMobile {...props} />)`
     width: 100%;
     background: none;
     margin-top: -180px;
@@ -85,7 +85,7 @@ const OfferTitle = styled.h1`
 
 
 
-const Arrow = styled(props => <ArrowIcon {...props}/>)`
+const Arrow = styled(props => <ArrowIcon {...props} />)`
     margin: 0 20px;
     @media(max-width: 480px) {
         margin: 0 4vw;
@@ -200,40 +200,40 @@ const Offer = () => {
                             </OfferTitle>
                             <OfferWhatIDo>
                                 <OfferIconWrapper>
-                                    <Brush/>
+                                    <Brush />
                                 </OfferIconWrapper>
-                                <Arrow/>
+                                <Arrow />
                                 <OfferIconWrapper>
-                                    <Code/>
+                                    <Code />
                                 </OfferIconWrapper>
                                 <OfferWhatIDoText>
-                                    Превращаю <br/>дизайн в код
+                                    Превращаю <br />дизайн в код
                                 </OfferWhatIDoText>
                             </OfferWhatIDo>
                             <OfferAbout>
-                                Привет! Меня зовут Антон. 
-                                Разработкой сайтов занимаюсь уже более 1 года. 
-                                Пишу чистый и понятный код, очень щепетильно 
-                                отношусь к деталям при верстке готовых макетов. 
+                                Привет! Меня зовут Антон.
+                                Разработкой приложений и сайтов занимаюсь уже более 1,5 лет.
+                                Пишу чистый и понятный код, очень щепетильно
+                                отношусь к деталям при верстке готовых макетов.
                                 Ниже можно ознакомиться с моими лучшими работами ↓
                             </OfferAbout>
                         </OfferInfoBlock>
                         <OfferMainSkills>
-                            <IconsGroup/>
+                            <IconsGroup />
                         </OfferMainSkills>
 
                     </OfferWrapper>
-                    
+
                 </Container>
 
-                
-            </OfferSection>
-            <SvgOverlayWrapper/>
-            <SvgOverlayWrapperMobile/>
 
-        
+            </OfferSection>
+            <SvgOverlayWrapper />
+            <SvgOverlayWrapperMobile />
+
+
         </>
-        
+
     )
 }
 
