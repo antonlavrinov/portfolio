@@ -77,6 +77,7 @@ const LinkWrapper = styled.a`
             border-left: 10px solid transparent;
             border-bottom: 10px solid var(--anton-blue);
         }
+    }
 `
 
 const EmailWrapper = styled.div`
@@ -149,6 +150,7 @@ const EmailWrapper = styled.div`
                 border-bottom: 10px solid var(--anton-green);
             `}
         }
+    }
 `
 
 
@@ -287,7 +289,7 @@ const Footer = () => {
                         </FooterSocials>
                         © {new Date().getFullYear()}
                         <FooterMail href="/">
-                            anton-dev.ru
+                            https://anton-dev.netlify.app/
                         </FooterMail>
                     </FooterWrapper>
                 </Container>
