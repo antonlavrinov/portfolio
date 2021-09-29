@@ -36,6 +36,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={metaTitle}
+      // script={}
       meta={[
         {
           name: `description`,
@@ -80,9 +81,9 @@ function SEO({ description, lang, meta, title }) {
         fbq('init', '4484635774906100');
         fbq('track', 'PageView');`}
         </script>
-        <noscript><img height="1" width="1" style="display:none"
+        {/* <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=4484635774906100&ev=PageView&noscript=1"
-        /></noscript>
+        /></noscript> */}
     </Helmet>
   )
 }
